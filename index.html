@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-POD App</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <h1>Welcome to U-POD App</h1>
+
+    <div id="bookingSection">
+        <h3>Book Your POD</h3>
+        <form id="bookingForm">
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" placeholder="Enter Your Name" required />
+
+            <p>Starting Point: <b>BVRIT College</b></p> <!-- Default starting point -->
+
+            <label for="destination">Destination:</label>
+            <select id="destination" required>
+                <option value="miyapur">Miyapur</option>
+                <option value="gandimaisamma">Gandimaisamma</option>
+                <option value="sangareddy">Sangareddy</option>
+                <option value="medchal">Medchal</option>
+            </select>
+
+            <div id="amountSection" style="margin-top: 10px;">
+                <p>Amount: <b>Rs. 10</b></p>
+                <button type="button" id="payButton">Pay</button>
+                <button type="button" id="cancelButton">Cancel</button>
+            </div>
+
+        </form>
+
+        <div id="paymentMethods" style="display: none; margin-top: 10px;">
+            <h3>Scan QR Code to Pay</h3>
+            <div id="qrCodeSection" style="margin-top: 10px;">
+                <img id="qrCode" src="" alt="UPI QR Code" />
+                <p id="generatedTransactionId"></p>
+            </div>
+        </div>
+
+        <div id="transactionSection" style="display: none; margin-top: 10px;">
+            <h3>Enter UPI Transaction ID</h3>
+            <input type="text" id="transactionId" placeholder="Enter Transaction ID" required />
+            <button type="button" id="submitTransactionId">Submit</button>
+        </div>
+
+        <div id="bookingInfo" style="display: none; margin-top: 10px;">
+            <h3>Booking Details</h3>
+            <p id="bookingDetails"></p>
+            <button id="printButton">Print Booking Details</button>
+        </div>
+
+        <button id="statusButton" style="display: none;">Check Status</button>
+    </div>
+
+    <button id="fetchData">Get Data from Flask</button>
+    <div id="dataDisplay"></div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!-- tracking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Location Tracking</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="assets/leaflet.css" />
+    <style>
+        #map { height: 400px; width: 100%; }
+        #trackingContainer { display: flex; justify-content: space-between; }
+        #trackingDetails, #trackHealthSection { width: 48%; }
+        .alert { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .alert-danger { background-color: #ff4444; color: white; }
+        .alert-warning { background-color: #ffbb33; color: black; }
+        .alert-success { background-color: #00C851; color: white; }
+        #batteryStatus { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div id="trackingContainer">
+        <div id="trackingDetails">
+            <h3>Booking Details</h3>
+            <p>Name: <span id="trackingName"></span></p>
+            <p>Starting Point: <span id="trackingStart"></span></p>
+            <p>Destination: <span id="trackingDestination"></span></p>
+            <p>Speed: <span id="trackingSpeed">0</span> km/h</p>
+            <p>Battery Level: <span id="batteryStatus">100%</span></p>
+        </div>
+        <div id="trackHealthSection">
+            <h3>Track Health</h3>
+            <p>Health: <span id="trackHealth">100%</span></p>
+            <p>Location: <span id="trackLocation">BVRIT College</span></p>
+        </div>
+    </div>
+    <div id="alertSection"></div>
+    <div id="map"></div>
+    <div class="button-container">
+        <button id="emergencyStopButton" style="margin-top: 10px;">Emergency Stop</button>
+        <button id="routeOptimizeButton" style="margin-top: 10px;">Optimize Route</button>
+    </div>
+
+    <script src="assets/leaflet.js"></script>
+    <script type="module" src="./assets/tracking.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "upod",
+  "version": "1.0.0",
+  "description": "U-POD Electron App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . Upod --platform=win32 --arch=x64 --overwrite --electron-version=25.9.8"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "electron": "^25.9.8",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.1.0",
+    "https": "^1.0.0",
+    "leaflet.animatedmarker": "^1.0.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.78.1",
+    "pako": "^2.1.0",
+    "punycode": "^2.3.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^17.1.2",
+    "i18next": "^24.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
